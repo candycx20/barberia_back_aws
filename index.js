@@ -4,6 +4,8 @@ import cors from 'cors'
 import db from "./database/db.js"
 //importamos nuestro enrutador
 import blogRoutes from './routes/routes.js'
+import dotenv from 'dotenv';
+dotenv.config();
 
 const app = express()
 
@@ -22,6 +24,7 @@ try {
     res.send('HOLA MUNDO')
 }) */
 
-app.listen(9000, ()=>{
-    console.log('Server UP running in http://localhost:9000/')
-})
+const port = process.env.PORT || 3000;
+    app.listen(port, () => {
+        console.log(`Server UP running in http://localhost:${port}/`);
+    });
