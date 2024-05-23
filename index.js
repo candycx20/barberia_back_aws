@@ -22,6 +22,6 @@ try {
     res.send('HOLA MUNDO')
 }) */
 
-app.listen(8000, ()=>{
-    console.log('Server UP running in http://localhost:8000/')
+app.listen(9000, ()=>{
+    console.log('Server UP running in http://localhost:9000/')
 })
